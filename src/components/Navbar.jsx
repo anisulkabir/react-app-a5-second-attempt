@@ -5,7 +5,7 @@ import logo from "../assets/logo-text.png";
 const Navbar = () => {
     return (
         <nav className="sticky top-0 z-40 w-full backdrop-blur-md bg-white/90 border-b border-slate-200">
-            <div className="mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-3 h-16 items-center sm:flex sm:justify-between">
                     <button type="button" 
                     aria-label="Open navigation menu"
