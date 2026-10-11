@@ -1,70 +1,8 @@
-import React from 'react';
-import reactIcon from "../assets/fallback-icons/react.png";
-import vuejsIcon from "../assets/fallback-icons/vuedotjs.png";
-import nodejsIcon from "../assets/fallback-icons/nodedotjs.png";
-import typescriptIcon from "../assets/fallback-icons/typescript.png";
-import viteIcon from "../assets/fallback-icons/vite.png";
+import { React, use } from 'react';
 
-// data
-const technologies = [
-    {
-        id: "react",
-        name: "React",
-        icon: reactIcon,
-        badge: "Popular",
-        description:
-            "A declarative, component-based JavaScript library for building modern user interfaces.",
-        category: "Frontend",
-        difficulty: "Beginner-Friendly",
-        rating: 4.9,
-    },
-    {
-        id: "vue",
-        name: "Vue.js",
-        icon: vuejsIcon,
-        badge: "Versatile",
-        description:
-            "An approachable, performant, and versatile framework for building web user interfaces.",
-        category: "Frontend",
-        difficulty: "Beginner-Friendly",
-        rating: 4.8,
-    },
-    {
-        id: "typescript",
-        name: "TypeScript",
-        icon: typescriptIcon,
-        badge: "Essential",
-        description:
-            "A strongly typed programming language that builds on JavaScript for robust tooling.",
-        category: "Language",
-        difficulty: "Intermediate",
-        rating: 4.9,
-    },
-    {
-        id: "nodejs",
-        name: "Node.js",
-        icon: nodejsIcon,
-        badge: "Standard",
-        description:
-            "An asynchronous event-driven JavaScript runtime built on Chrome's V8 engine.",
-        category: "Backend",
-        difficulty: "Intermediate",
-        rating: 4.8,
-    },
-    {
-        id: "vite",
-        name: "Vite",
-        icon: viteIcon,
-        badge: "Bundler",
-        description:
-            "Next-generation frontend tooling providing lightning-fast build and dev environment speeds.",
-        category: "Tools",
-        difficulty: "Beginner-Friendly",
-        rating: 4.9,
-    },
-];
-
-const Main = () => {
+const Main = ({dataPromise}) => {
+    const technologies = use(dataPromise);
+    
     return (
         <section className="bg-white">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
