@@ -3,7 +3,7 @@ import bannerImg from "../assets/banner-stack.png";
 
 const Hero = () => {
     return (
-        <section className="w-full overflow-hidden bg-white">
+        <section className="w-full overflow-hidden bg-white font-[Inter]">
             <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
                 <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
 
@@ -16,7 +16,7 @@ const Hero = () => {
                             </span>
                         </h1>
 
-                        <p className="mx-auto max-w-md text-base text-gray-500 sm:text-lg md:mx-0">
+                        <p className="mx-auto max-w-md text-base text-gray-500 sm:text-lg md:mx-0 font-[Plus_Jakarta_Sans] font-semibold">
                             Explore frontend, backend, database, and tooling options,
                             compare them side by side, and put together the stack
                             that fits your next project.

@@ -67,18 +67,18 @@ const technologies = [
 const Main = () => {
     return (
         <section className="bg-white">
-            <div className="mx-auto max-w-[1400px] px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+            <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
 
                 {/* Section Header */}
                 <div className="mb-8">
-                    <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+                    <h2 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl font-[Inter]">
                         Explore the{" "}
                         <span className="bg-linear-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
                             Technologies
                         </span>
                     </h2>
 
-                    <p className="mt-3 text-base text-slate-500 sm:text-lg">
+                    <p className="mt-3 text-base text-slate-500 sm:text-lg font-[Plus_Jakarta_Sans]">
                         Add any technologies you like — each one can be added only once.
                     </p>
                 </div>
@@ -87,7 +87,7 @@ const Main = () => {
                 <div className="grid items-start gap-10 lg:grid-cols-[1fr_320px]">
 
                     {/* Technology Cards */}
-                    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+                    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3 font-[Plus_Jakarta_Sans]">
                         {technologies.map((tech) => (
                             <div
                                 key={tech.id}
@@ -129,7 +129,7 @@ const Main = () => {
                                         {tech.difficulty}
                                     </span>
 
-                                    <span className="flex shrink-0 items-center gap-1 font-medium text-slate-700">
+                                    <span className="flex shrink-0 items-center gap-1 font-semibold text-slate-700">
                                         <span className="text-amber-400">★</span>
                                         {tech.rating}
                                     </span>
