@@ -1,10 +1,27 @@
-import { React, use } from 'react';
+import React, { use, useState } from 'react';
+import Stack from './Stack';
 
-const Main = ({dataPromise}) => {
+
+const Main = ({ dataPromise }) => {
     const technologies = use(dataPromise);
-    
+
+    const [stackedTechnologies, setStackedTechnologies] = useState([]);
+
+    const handleAddToStack = (tech) => {
+        setStackedTechnologies((exist) => {
+            for (const item of exist) {
+                if (item.id === tech.id) {
+                    //toast.error(`${tech.name} is already selected`);
+                    return exist; // already in the stack..
+                }
+            }
+
+            return [...exist, tech];
+        });
+    };
+
     return (
-        <section className="bg-white">
+        <section id="technologies" className="bg-white">
             <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
 
                 {/* Section Header */}
@@ -35,12 +52,7 @@ const Main = ({dataPromise}) => {
 
                                 {/* Icon and Badge */}
                                 <div className="flex items-start justify-between gap-3">
-                                    <img
-                                        src={tech.icon}
-                                        alt={tech.name}
-                                        className="h-9 w-9 object-contain"
-                                    />
-
+                                    <img src={tech.icon} alt={tech.name} className="h-9 w-9 object-contain" />
                                     <span className="rounded-full bg-pink-50 px-2.5 py-1 text-xs font-semibold text-pink-600">
                                         {tech.badge}
                                     </span>
@@ -78,31 +90,17 @@ const Main = ({dataPromise}) => {
                                 <button
                                     type="button"
                                     id={`tech-toggle-${tech.id}`}
-                                    className="mt-4 cursor-pointer rounded-lg bg-slate-900 px-3 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
-                                >
+                                    onClick={() => handleAddToStack(tech)}
+                                    className="mt-4 cursor-pointer rounded-lg bg-slate-900 px-3 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-slate-800">
                                     Add to Stack
                                 </button>
 
                             </div>
                         ))}
                     </div>
-
-                    {/* Stack Sidebar */}
-                    <aside className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm lg:sticky lg:top-20">
-
-                        <h3 className="text-lg font-bold text-slate-900">
-                            Your Stack
-                        </h3>
-
-                        <p className="mt-1 text-xs text-slate-500">
-                            No Technology Selected
-                        </p>
-
-                        <div className="mt-4 rounded-lg border border-dashed border-slate-300 py-8 text-center text-xs text-slate-400">
-                            Your stack is empty.
-                        </div>
-
-                    </aside>
+                    <>
+                        <Stack stackedTechnologies={stackedTechnologies} setStackedTechnologies={setStackedTechnologies} />
+                    </>
 
                 </div>
             </div>

@@ -3,7 +3,7 @@ import bannerImg from "../assets/banner-stack.png";
 
 const Hero = () => {
     return (
-        <section className="w-full overflow-hidden bg-white font-[Inter]">
+        <section id="hero" className="w-full overflow-hidden bg-white font-[Inter]">
             <div className="mx-auto w-full max-w-7xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
                 <div className="grid grid-cols-1 items-center gap-12 md:grid-cols-2">
 
@@ -42,7 +42,6 @@ const Hero = () => {
                             className="w-full max-w-md drop-shadow-2xl"
                         />
                     </div>
-
                 </div>
             </div>
         </section>

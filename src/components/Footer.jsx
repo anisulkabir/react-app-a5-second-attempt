@@ -27,7 +27,7 @@ const Footer = () => {
                         <div className="flex items-center gap-4 pt-1 font-semibold">
                             <a
                                 id="footer-social-github"
-                                href="#"
+                                href="https://github.com" target="_blank"
                                 className="text-sm text-slate-500 transition-colors hover:text-pink-600"
                             >
                                 GitHub
@@ -35,7 +35,7 @@ const Footer = () => {
 
                             <a
                                 id="footer-social-twitter"
-                                href="#"
+                                href="https://x.com" target="_blank"
                                 className="text-sm text-slate-500 transition-colors hover:text-pink-600"
                             >
                                 Twitter
@@ -43,7 +43,7 @@ const Footer = () => {
 
                             <a
                                 id="footer-social-linkedin"
-                                href="#"
+                                href="https://linkedin.com" target="_blank"
                                 className="text-sm text-slate-500 transition-colors hover:text-pink-600"
                             >
                                 LinkedIn
@@ -61,7 +61,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     id="footer-home-link"
-                                    href="#home"
+                                    href="#hero"
                                     className="text-sm text-slate-500 transition-colors hover:text-slate-900"
                                 >
                                     Home
@@ -81,7 +81,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     id="footer-projects-link"
-                                    href="#projects"
+                                    href="#technologies"
                                     className="text-sm text-slate-500 transition-colors hover:text-slate-900"
                                 >
                                     Projects
@@ -100,7 +100,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     id="footer-about-link"
-                                    href="#about"
+                                    href="#hero"
                                     className="text-sm text-slate-500 transition-colors hover:text-slate-900"
                                 >
                                     About
@@ -110,7 +110,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     id="footer-contact-link"
-                                    href="#contact"
+                                    href="#hero"
                                     className="text-sm text-slate-500 transition-colors hover:text-slate-900"
                                 >
                                     Contact
@@ -120,7 +120,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     id="footer-careers-link"
-                                    href="#careers"
+                                    href="#technologies "
                                     className="text-sm text-slate-500 transition-colors hover:text-slate-900"
                                 >
                                     Careers
@@ -139,7 +139,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     id="footer-privacy-link"
-                                    href="#privacy"
+                                    href="#"
                                     className="text-sm text-slate-500 transition-colors hover:text-slate-900"
                                 >
                                     Privacy Policy
@@ -149,7 +149,7 @@ const Footer = () => {
                             <li>
                                 <a
                                     id="footer-terms-link"
-                                    href="#terms"
+                                    href="#hero"
                                     className="text-sm text-slate-500 transition-colors hover:text-slate-900"
                                 >
                                     Terms of Service

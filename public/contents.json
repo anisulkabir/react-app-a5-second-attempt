@@ -30,6 +30,16 @@
         "badge": "Top SQL"
     },
     {
+        "id": "javascript",
+        "name": "JavaScript",
+        "category": "Language",
+        "description": "A versatile programming language that powers interactive experiences across the web.",
+        "icon": "https://icon.icepanel.io/Technology/svg/JavaScript.svg",
+        "rating": 4.9,
+        "difficulty": "Beginner-Friendly",
+        "badge": "Essential"
+    },
+    {
         "id": "typescript",
         "name": "TypeScript",
         "category": "Language",
