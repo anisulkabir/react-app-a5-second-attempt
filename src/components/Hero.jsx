@@ -1,5 +1,6 @@
 import React from 'react';
 import bannerImg from "../assets/banner-stack.png";
+import { toast } from 'react-toastify';
 
 const Hero = () => {
     return (
@@ -24,11 +25,13 @@ const Hero = () => {
 
                         <div className="flex flex-col justify-center gap-3 pt-2 sm:flex-row md:justify-start">
 
-                            <button type="button" className="cursor-pointer rounded-lg bg-linear-to-r from-pink-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90" >
+                            <button type="button" onClick={() => toast.info('not implemented yet')}
+                            className="cursor-pointer rounded-lg bg-linear-to-r from-pink-600 to-purple-600 px-6 py-3 text-sm font-semibold text-white transition-opacity hover:opacity-90" >
                                 Explore Technologies
                             </button>
 
-                            <button type="button" id="hero-learn-more-btn" className="cursor-pointer rounded-lg border border-slate-200 px-6 py-3 text-sm font-semibold text-gray-700 transition-colors hover:bg-slate-50" >
+                            <button type="button" onClick={() => toast.info('not implemented yet')}
+                            id="hero-learn-more-btn" className="cursor-pointer rounded-lg border border-slate-200 px-6 py-3 text-sm font-semibold text-gray-700 transition-colors hover:bg-slate-50" >
                                 Learn More
                             </button>
 

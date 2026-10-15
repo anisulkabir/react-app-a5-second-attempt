@@ -5,6 +5,7 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 import { Suspense } from "react";
 import Loading from "./components/Loading";
+import { ToastContainer, toast } from 'react-toastify';
 
 /* const dataPromise = fetch('/contents.json').then((res) => {
   if (!res.ok) {
@@ -27,6 +28,7 @@ function App() {
         <Main dataPromise={dataPromise()} />
       </Suspense>
       <Footer />
+      <ToastContainer />
     </>
   );
 }

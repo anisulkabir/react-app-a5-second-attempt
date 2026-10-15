@@ -1,10 +1,13 @@
 import React from 'react';
 import { X } from 'lucide-react';
+import { toast } from 'react-toastify';
 
 const Stack = ({ stackedTechnologies, setStackedTechnologies }) => {
     const count = stackedTechnologies.length;
     const handleRemoveFromStack = (id) => {
         setStackedTechnologies((current) => current.filter((item) => item.id !== id));
+        toast.info('Technology removed from stack');
+
     };
 
     return (

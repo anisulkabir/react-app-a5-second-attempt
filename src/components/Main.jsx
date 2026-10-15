@@ -1,5 +1,7 @@
 import React, { use, useState } from 'react';
 import Stack from './Stack';
+import { toast } from 'react-toastify';
+
 
 
 const Main = ({ dataPromise }) => {
@@ -11,11 +13,12 @@ const Main = ({ dataPromise }) => {
         setStackedTechnologies((exist) => {
             for (const item of exist) {
                 if (item.id === tech.id) {
-                    //toast.error(`${tech.name} is already selected`);
+                    toast.error(`${tech.name} is already selected`);
                     return exist; // already in the stack..
                 }
             }
 
+            toast.success('Technology ' + tech.name + ' added to stack');
             return [...exist, tech];
         });
     };
